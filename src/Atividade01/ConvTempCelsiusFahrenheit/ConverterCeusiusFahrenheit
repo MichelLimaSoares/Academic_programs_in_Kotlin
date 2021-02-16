@@ -1,0 +1,14 @@
+/*
+Faça um programa na Linguagem Kotlin que leia uma temperatura em
+ graus Celsius e apresentá-la convertida em graus Fahrenheit.
+  A fórmula de conversão é F <-- (9 * C + 160) /5,
+  sendo f a temperatura em Fahrenheit e C a temperatura em Celsius.
+ */
+fun main(){
+    var celsius: Int = 10
+    for(celsius in 10..100 step 10){
+        println("Celsius $celsius")
+        var fahr: Int = (9 * celsius + 160) / 5
+        println("Fahrenheit $fahr")
+    }
+}

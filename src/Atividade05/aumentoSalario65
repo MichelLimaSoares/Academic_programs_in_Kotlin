@@ -1,0 +1,46 @@
+/*
+65. Fazer um programa para ler os dados de um funcionário
+(nome, salário Bruto e Desconto). Em seguida, mostrar os dados do
+funcionário (nome e salário líquido). Em seguida, aumentar o salário do
+ funcionário com base em uma porcentagem dada e mostrar novamente os
+  dados do funcionário. Use a classe projetada abaixo:
+ */
+// Nome: Michel de Lima Soares
+//Ra: 2920481911045
+//Objetivo: Calcular desconto e aumento de salario do funcionario
+
+
+class Funcionario{
+    var nome: String = ""
+    var salario: Double = 10000.00
+    var desconto: Double = 1000.00
+}
+class Salario{
+    val f = Funcionario()
+    var aumentoPorcento: Double = 0.04
+    var salDesc: Double = f.salario - f.desconto
+    var aumento = salDesc + (f.salario * aumentoPorcento)
+}
+
+fun main(){
+    val f = Funcionario()
+    val a = Salario()
+    f.nome = "Michel Soares"
+
+    println("Nome: ${f.nome}")
+    println("Salario Bruto: R$ ${f.salario}")
+    println("Desconto: ${f.desconto}")
+    println("")
+    println("")
+    println("Dados do Funcionario: ${f.nome}, R$ ${a.salDesc}")
+    println("Aumento de: R$ ${a.aumento} %")
+    println("")
+    println("")
+    println("Dados do Funcionario: ${f.nome}, R$ ${a.aumento} %")
+}
+
+
+/*fun main() {
+    readLine()!!.toInt()
+    println("Hello, world!!!")
+}*/
